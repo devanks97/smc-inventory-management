@@ -1,1 +1,1 @@
-web: gunicorn SMCManagement.wsgi --log-file -
+web: gunicorn --config=gunicorn/config.py SMCManagement.wsgi --log-file -

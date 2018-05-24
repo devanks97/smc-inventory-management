@@ -25,6 +25,11 @@ SECRET_KEY = 't$ct%q$*2h=yegf_yn@1g$a+!^w4s-g3*pcx-nv7$nhrr1nqe%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+
 ALLOWED_HOSTS = ['smc-inventory-management.herokuapp.com','127.0.0.1']
 
 
@@ -44,6 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'sslify.middleware.SSLifyMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -78,18 +84,18 @@ WSGI_APPLICATION = 'SMCManagement.wsgi.application'
 
 DATABASES = {
 #LOCAL DATABASE
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER': 'devanks',
-        'PASSWORD': 'devanks',
+#        'NAME': 'django',
+#        'USER': 'devanks',
+#        'PASSWORD': 'devanks',
 #        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
 #        'PORT': '3306',
-    }
+#    }
 }
 
 
