@@ -5,7 +5,7 @@ from .models import record
 
 from import_export import resources
 
-from import_export.admin import ImportExportModelAdmin
+from .ModuleAdminSettings import ImportExportActionModelAdmin
 
 class RecordResource(resources.ModelResource):
 
@@ -14,8 +14,11 @@ class RecordResource(resources.ModelResource):
         exclude = ('id', )
 
 
-class recordAdmin(ImportExportModelAdmin):
+class recordAdmin(ImportExportActionModelAdmin):
+    #resource_class = RecordResource
     list_display = ['name', 'department', 'year', 'device']
     list_filter = ('department', 'year', 'device')
+    search_fields = ('name', 'department')
     pass
+
 admin.site.register(record,recordAdmin)
