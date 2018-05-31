@@ -25,18 +25,28 @@ SECRET_KEY = 't$ct%q$*2h=yegf_yn@1g$a+!^w4s-g3*pcx-nv7$nhrr1nqe%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = TRUE
 
+DEBUG = True
 
 ALLOWED_HOSTS = ['smc-inventory-management.herokuapp.com','127.0.0.1']
 
-#Logging
+#CHECK IF DEBUG
 
-LOGGING = {
-    'loggers': {
-        'django.db.backends': {
-            'level': 'DEBUG',
-        },
-    },
-}
+if DEBUG:
+
+    # Debug Toolbar Activate
+
+    from .debug_toolbar_settings import *
+    #DEBUG TOOLBAR CODE ENDS
+
+
+
+    #LOGGING CODE STARTS
+
+    from .logging_settings import *
+
+    #Logging Code ENDS
+
+#DEBUG EXTRA CODE ENDS
 
 # Application definition
 

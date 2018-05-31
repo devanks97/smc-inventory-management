@@ -1,4 +1,5 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
 
 from django.core.validators import MinValueValidator
 
@@ -25,3 +26,4 @@ class record(models.Model):
         return self.year
     def device_list(self):
         return self.device
+    history = HistoricalRecords()
