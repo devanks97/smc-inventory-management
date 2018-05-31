@@ -11,11 +11,6 @@ from simple_history.admin import SimpleHistoryAdmin
 #from import_export.admin import ImportExportModelAdmin
 
 
-class recordAdmin(ImportExportModelAdmin):
-    list_display = ['name', 'department', 'year', 'device']
-    list_filter = ('department', 'year', 'device')
-    pass
-
 
 class RecordResource(resources.ModelResource):
 
@@ -24,4 +19,10 @@ class RecordResource(resources.ModelResource):
         exclude = ('id', )
 '''
 
-admin.site.register(record,SimpleHistoryAdmin)
+class recordAdmin(SimpleHistoryAdmin):
+    list_display = ['name', 'department', 'year', 'device']
+    list_filter = ('department', 'year', 'device')
+    history_list_display = ["status"]
+    pass
+
+admin.site.register(record,recordAdmin)
