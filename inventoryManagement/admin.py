@@ -18,6 +18,7 @@ class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
     list_display = ['name', 'department', 'year', 'device']
     list_filter = ('department', 'year', 'device')
+    search_fields = ('name', 'department')
     pass
 
 admin.site.register(record,recordAdmin)
