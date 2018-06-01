@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 't$ct%q$*2h=yegf_yn@1g$a+!^w4s-g3*pcx-nv7$nhrr1nqe%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['smc-inventory-management.herokuapp.com','127.0.0.1']
 
 #CHECK IF DEBUG
@@ -32,7 +32,7 @@ if DEBUG:
 
     # Debug Toolbar Activate
 
-    from .debug_toolbar_settings import *
+    # from .debug_toolbar_settings import *
     #DEBUG TOOLBAR CODE ENDS
 
 
@@ -51,12 +51,14 @@ INSTALLED_APPS = [
     'inventoryManagement.apps.InventorymanagementConfig',
     'import_export',
     'simple_history',
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +78,7 @@ ROOT_URLCONF = 'SMCManagement.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

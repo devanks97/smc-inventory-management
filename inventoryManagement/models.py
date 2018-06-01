@@ -9,12 +9,14 @@ class record(models.Model):
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
     pc = 'pc'
     lt = 'lt'
+    aio = 'aio'
     DEVICE_CHOICES = (
         (pc, 'Personal Computer'),
         (lt, 'Laptop'),
+        (aio, 'All In One'),
     )
     device = models.CharField(
-        max_length=2,
+        max_length=3,
         choices=DEVICE_CHOICES,
         default=pc,
     )
@@ -27,3 +29,8 @@ class record(models.Model):
     def device_list(self):
         return self.device
     history = HistoricalRecords()
+class recordSummary(record):
+    class Meta:
+	        proxy = True
+	        verbose_name = 'Department Inventory'
+	        verbose_name_plural = 'Departments Inventory'
