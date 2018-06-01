@@ -2,17 +2,18 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import record
+from .models import recordSummary
 
 from import_export import resources
 
 from .ModuleAdminSettings import ImportExportActionModelAdmin
+from .ModuleSummaryAdminSettings import recordSummaryAdmin
 
 class RecordResource(resources.ModelResource):
 
     class Meta:
         model = record
         exclude = ('id', )
-
 
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
@@ -22,3 +23,4 @@ class recordAdmin(ImportExportActionModelAdmin):
     pass
 
 admin.site.register(record,recordAdmin)
+admin.site.register(recordSummary,recordSummaryAdmin)
