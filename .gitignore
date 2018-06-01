@@ -108,5 +108,5 @@ venv.bak/
 
 #Database
 *.sqlite3
-#Error
-gunicorn/
+#Static files
+staticfiles/
