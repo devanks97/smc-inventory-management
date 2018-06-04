@@ -52,6 +52,7 @@
     </script>
 {% endblock %}
 {% block content %}
+    {{ block.super }}
     <h1> Graphs </h1>
     <hr>
     <div class="row">
@@ -62,5 +63,4 @@
             <canvas id="department-chart" style="width: 100px !important;"></canvas>
         </div>
     </div>
-    {{ block.super }}
 {% endblock %}
