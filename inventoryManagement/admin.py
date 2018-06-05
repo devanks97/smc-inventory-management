@@ -21,12 +21,12 @@ class recordSummaryAdmin(admin.ModelAdmin):
     list_filter = (
         'device','department','year'
     )
-        def get_queryset(self, request):
-            return record.objects.annotate(record_count=Count('student'))
-        def records_count(self, obj):
-            return obj.records_count
-        records_count.short_description = _('Records count')
-		
+    def get_queryset(self, request):
+        return record.objects.annotate(record_count=Count('student'))
+    def records_count(self, obj):
+        return obj.records_count
+    records_count.short_description = _('Records count')
+        
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
     list_display = ['name', 'department', 'year', 'device']
