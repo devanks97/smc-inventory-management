@@ -22,7 +22,7 @@ class recordSummaryAdmin(admin.ModelAdmin):
         'device','department','year'
     )
     def get_queryset(self, request):
-        return record.objects.values('department','device').annotate(records_count=Count('id'))
+        return record.objects.values('department','device').annotate(total=Count('id')).order_by('total')
     def records_count(self, obj):
         return obj.records_count
     records_count.short_description = ('Records count')
