@@ -17,7 +17,7 @@ class RecordResource(resources.ModelResource):
         exclude = ('id', )
 class recordSummaryAdmin(admin.ModelAdmin):
     # change_list_template = 'admin/record_summary_change_graph.html'
-    list_display = ['department', 'device', Count('id')]
+    list_display = ['department', 'device']
     list_filter = (
         'device','department','year'
     )
