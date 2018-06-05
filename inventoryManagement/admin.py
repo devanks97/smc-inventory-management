@@ -23,7 +23,6 @@ class recordSummaryAdmin(admin.ModelAdmin):
     )
     def get_queryset(self, request):
         return record.objects.values('department','device').annotate(total=Count('id')).order_by('total')
-    records_count.short_description = ('Records count')
         
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
