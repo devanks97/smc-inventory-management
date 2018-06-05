@@ -21,8 +21,23 @@ class recordSummaryAdmin(admin.ModelAdmin):
     list_filter = (
         'device','department','year'
     )
-    def get_queryset(self, request):
-        return record.objects.values('department','device').annotate(total=Count('id')).order_by('total')
+    def changelist_view(self, request, extra_context=None):
+        response = super().changelist_view(
+        request,
+        extra_context=extra_context,
+        )
+        try:
+            qs = response.context_data['cl'].queryset
+        except (AttributeError, KeyError):
+            return response
+	
+        response.context_data['summary'] = list(
+        qs
+        .values('department','device')
+        .annotate(total=Count('id'))
+        .order_by('total')
+        )
+        return response
         
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
