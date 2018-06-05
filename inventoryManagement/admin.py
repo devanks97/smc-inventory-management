@@ -17,14 +17,12 @@ class RecordResource(resources.ModelResource):
         exclude = ('id', )
 class recordSummaryAdmin(admin.ModelAdmin):
     # change_list_template = 'admin/record_summary_change_graph.html'
-    list_display = ['department', 'device', 'records_count']
+    list_display = ['department', 'device']
     list_filter = (
         'device','department','year'
     )
     def get_queryset(self, request):
         return record.objects.values('department','device').annotate(total=Count('id')).order_by('total')
-    def records_count(self, obj):
-        return obj.records_count
     records_count.short_description = ('Records count')
         
 class recordAdmin(ImportExportActionModelAdmin):
