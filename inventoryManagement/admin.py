@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.db.models import Count
 
 # Register your models here.
 from .models import record
@@ -16,8 +17,9 @@ class RecordResource(resources.ModelResource):
         exclude = ('id', )
 class recordSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/record_summary_change_graph.html'
-    list_filter = (
-        'device','department',Count('id')
+    list_display = ['department', 'device', Count('id')]
+	list_filter = (
+        'device','department','year'
     )
 		
 class recordAdmin(ImportExportActionModelAdmin):
