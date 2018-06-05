@@ -25,7 +25,7 @@ class recordSummaryAdmin(admin.ModelAdmin):
         return record.objects.annotate(record_count=Count('student'))
     def records_count(self, obj):
         return obj.records_count
-    records_count.short_description = _('Records count')
+    records_count.short_description = ('Records count')
         
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
