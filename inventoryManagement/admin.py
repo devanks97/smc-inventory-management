@@ -7,14 +7,19 @@ from .models import recordSummary
 from import_export import resources
 
 from .ModuleAdminSettings import ImportExportActionModelAdmin
-from .ModuleSummaryAdminSettings import recordSummaryAdmin
+# from .ModuleSummaryAdminSettings import recordSummaryAdmin
 
 class RecordResource(resources.ModelResource):
 
     class Meta:
         model = record
         exclude = ('id', )
-
+class recordSummaryAdmin(admin.ModelAdmin):
+    change_list_template = 'admin/record_summary_change_graph.html'
+    list_filter = (
+        'device','department',Count('id')
+    )
+		
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
     list_display = ['name', 'department', 'year', 'device']
