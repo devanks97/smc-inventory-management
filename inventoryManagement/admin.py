@@ -18,7 +18,7 @@ class RecordResource(resources.ModelResource):
 class recordSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/record_summary_change_graph.html'
     list_display = ['department', 'device', Count('id')]
-	list_filter = (
+    list_filter = (
         'device','department','year'
     )
 		
