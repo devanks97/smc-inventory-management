@@ -1,4 +1,4 @@
-INTERNAL_IPS = ('127.0.0.1', 'localhost',)
+# INTERNAL_IPS = ('127.0.0.1', 'localhost',)
 MIDDLEWARE = (
    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
@@ -24,9 +24,5 @@ DEBUG_TOOLBAR_PANELS = [
 
 DEBUG_TOOLBAR_CONFIG = {
    'INTERCEPT_REDIRECTS': False,
-}
-def show_toolbar(request):
-    return True
-DEBUG_TOOLBAR_CONFIG = {
-    "SHOW_TOOLBAR_CALLBACK" : show_toolbar,
+   'SHOW_TOOLBAR_CALLBACK': True,
 }
