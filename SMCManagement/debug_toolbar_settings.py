@@ -1,5 +1,11 @@
 # INTERNAL_IPS = ('127.0.0.1', 'localhost',)
+# MIDDLEWARE += (
+   # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+# )
 
+# INSTALLED_APPS += (
+   # 'debug_toolbar',
+# )
 DEBUG_TOOLBAR_PANELS = [
    'debug_toolbar.panels.versions.VersionsPanel',
    'debug_toolbar.panels.timer.TimerPanel',
@@ -17,5 +23,9 @@ DEBUG_TOOLBAR_PANELS = [
 
 DEBUG_TOOLBAR_CONFIG = {
    'INTERCEPT_REDIRECTS': False,
-   'SHOW_TOOLBAR_CALLBACK': True,
+}
+def show_toolbar(request):
+    return True
+DEBUG_TOOLBAR_CONFIG = {
+    "SHOW_TOOLBAR_CALLBACK" : show_toolbar,
 }
