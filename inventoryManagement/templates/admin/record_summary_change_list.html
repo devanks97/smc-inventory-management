@@ -63,7 +63,7 @@
 			  {% for row in summary %}
 			  <tr class="{% cycle 'row1' 'row2' %}">
 				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}"> {{ row.department }} </a></td>
-				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}&device_exact={{ row.device }}">{% if row.device == 'lt' %}Laptop{% else %}Personal Computer{% endif %} </td>
+				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}&device__exact={{ row.device }}">{% if row.device == 'lt' %}Laptop{% else %}Personal Computer{% endif %} </td>
 				<td> {{ row.total | intcomma }} </td>
 			  </tr>
 			  {% endfor %}
