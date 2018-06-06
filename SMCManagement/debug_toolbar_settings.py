@@ -1,11 +1,4 @@
 # INTERNAL_IPS = ('127.0.0.1', 'localhost',)
-MIDDLEWARE = (
-   'debug_toolbar.middleware.DebugToolbarMiddleware',
-)
-
-INSTALLED_APPS = (
-   'debug_toolbar',
-)
 
 DEBUG_TOOLBAR_PANELS = [
    'debug_toolbar.panels.versions.VersionsPanel',
