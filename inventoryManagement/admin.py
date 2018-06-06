@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.db.models import Count
 
 # Register your models here.
 from .models import record
@@ -14,7 +15,7 @@ class RecordResource(resources.ModelResource):
     class Meta:
         model = record
         exclude = ('id', )
-
+       
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
     list_display = ['name', 'department', 'year', 'device']

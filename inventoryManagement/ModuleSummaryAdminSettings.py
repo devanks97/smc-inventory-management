@@ -3,8 +3,9 @@ from django.db.models import Count
 
 class recordSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/record_summary_change_list.html'
+    list_display = ['department', 'device']
     list_filter = (
-        'device',
+        'device','department','year'
     )
     def changelist_view(self, request, extra_context=None):
         response = super().changelist_view(
@@ -23,3 +24,6 @@ class recordSummaryAdmin(admin.ModelAdmin):
         .order_by('total')
         )
         return response
+    # def get_queryset(self, request):
+        # qs = super(recordSummaryAdmin, self).get_queryset(request)
+        # return qs.values('department','device').annotate(total=Count('id')).order_by('total')

@@ -1,12 +1,11 @@
-INTERNAL_IPS = ('127.0.0.1', 'localhost',)
-MIDDLEWARE += (
-   'debug_toolbar.middleware.DebugToolbarMiddleware',
-)
+# INTERNAL_IPS = ('127.0.0.1', 'localhost',)
+# MIDDLEWARE += (
+   # 'debug_toolbar.middleware.DebugToolbarMiddleware',
+# )
 
-INSTALLED_APPS += (
-   'debug_toolbar',
-)
-
+# INSTALLED_APPS += (
+   # 'debug_toolbar',
+# )
 DEBUG_TOOLBAR_PANELS = [
    'debug_toolbar.panels.versions.VersionsPanel',
    'debug_toolbar.panels.timer.TimerPanel',

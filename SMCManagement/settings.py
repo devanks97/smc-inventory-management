@@ -24,7 +24,7 @@ SECRET_KEY = 't$ct%q$*2h=yegf_yn@1g$a+!^w4s-g3*pcx-nv7$nhrr1nqe%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['smc-inventory-management.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['smc-inventory-management.herokuapp.com','smc-inventory-management-beta.herokuapp.com','127.0.0.1']
 
 #CHECK IF DEBUG
 
@@ -32,7 +32,7 @@ if DEBUG:
 
     # Debug Toolbar Activate
 
-    # from .debug_toolbar_settings import *
+    from .debug_toolbar_settings import *
     #DEBUG TOOLBAR CODE ENDS
 
 
@@ -58,7 +58,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'django.contrib.humanize',
+    'django.contrib.humanize',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'SMCManagement.urls'
@@ -154,7 +156,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # The URL to use when referring to static files (where they will be served from)
-STATIC_URL = '/static/'
+STATIC_URL =  "/static/"
 
 
 # Heroku: Update database configuration from $DATABASE_URL.
