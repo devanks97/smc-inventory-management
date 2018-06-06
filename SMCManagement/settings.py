@@ -32,7 +32,7 @@ if DEBUG:
 
     # Debug Toolbar Activate
 
-    # from .debug_toolbar_settings import *
+    from .debug_toolbar_settings import *
     #DEBUG TOOLBAR CODE ENDS
 
 
