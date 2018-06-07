@@ -24,10 +24,10 @@ SECRET_KEY = 't$ct%q$*2h=yegf_yn@1g$a+!^w4s-g3*pcx-nv7$nhrr1nqe%'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-# DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+# DEBUG = False
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 DEBUG_PROPAGATE_EXCEPTIONS = True
-ALLOWED_HOSTS = ["localhost","127.0.0.1",]
+ALLOWED_HOSTS = ["localhost","smc-inventory-management.herokuapp.com","smc-inventory-management-beta.herokuapp.com"]
 
 ADMINS = [('DevanKS', 'devanks97@gmail.com')]
 #CHECK IF DEBUG
