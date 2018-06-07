@@ -44,8 +44,10 @@
     {% if not is_popup %}
     <!-- Header -->
     <div id="header">
-        <div id="branding">
+		<div id="branding-image" style="float:left">
 			<img src="{% static 'images/logo.png' %}" />
+		</div>
+        <div id="branding">
         {% block branding %}{% endblock %}
         </div>
         {% block usertools %}
