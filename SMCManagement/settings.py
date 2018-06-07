@@ -22,11 +22,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 't$ct%q$*2h=yegf_yn@1g$a+!^w4s-g3*pcx-nv7$nhrr1nqe%'
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+DEBUG = False
+# DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+DEBUG_PROPAGATE_EXCEPTIONS = True
+ALLOWED_HOSTS = ["localhost","127.0.0.1",]
 
-ALLOWED_HOSTS = ['*']
-
+ADMINS = [('DevanKS', 'devanks97@gmail.com')]
 #CHECK IF DEBUG
 
 if DEBUG:
@@ -45,9 +48,8 @@ if DEBUG:
     #Logging Code ENDS
 
 #DEBUG EXTRA CODE ENDS
-
+from .logging_settings import *
 # Application definition
-
 INSTALLED_APPS = [
     'inventoryManagement.apps.InventorymanagementConfig',
     'import_export',
@@ -157,8 +159,12 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # The URL to use when referring to static files (where they will be served from)
-STATIC_URL =  "/static/"
+STATIC_URL =  '/static/'
 
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
