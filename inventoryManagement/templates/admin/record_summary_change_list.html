@@ -37,7 +37,7 @@
 			  {% for row in summary %}
 			  <tr class="{% cycle 'row1' 'row2' %}">
 				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}"> {{ row.department }} </a></td>
-				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}&device__exact={{ row.device }}">{% if row.device == 'lt' %}Laptop{% else if row.device == 'pc' %}Personal Computer{% else %}All In One{% endif %}</a> </td>
+				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}&device__exact={{ row.device }}">{% if row.device == 'lt' %}Laptop{% elif row.device == 'pc' %}Personal Computer{% else %}All In One{% endif %}</a> </td>
 				<td> {{ row.total | intcomma }} </td>
 			  </tr>
 			  {% endfor %}
@@ -45,6 +45,6 @@
 		
 		</table>
 	</div>
-	<script type="text/javascript" src="{% static 'js/chartFile.min.js' %}" defer></script>
+	<script type="text/javascript" src="{% static 'js/chartFile.min.js' %}" defer="defer"></script>
 {% endblock %}
 {% block pagination %}{% endblock %}
