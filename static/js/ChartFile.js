@@ -19,11 +19,11 @@ window.onload = function(){
 			labelList[tempDepartment] = {lt:0,pc:0,aio:0};
 		}
 		
-		if(tempDevice == "Laptop")
+		if(tempDevice[0] == "L")
 		{
 			labelList[tempDepartment].lt = tempTotal;
 		}
-		else if(tempDevice == "Personal Computer")
+		else if(tempDevice[0] == "P")
 		{
 			labelList[tempDepartment].pc = tempTotal;
 		}
