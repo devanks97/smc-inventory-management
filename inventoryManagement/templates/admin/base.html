@@ -22,7 +22,7 @@
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 <title>{% block title %}{% endblock %}</title>
-<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}" />
+<link rel="stylesheet" type="text/css" href='{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}' />
 {% block extrastyle %}{% endblock %}
 {% if LANGUAGE_BIDI %}
 <link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />
@@ -43,11 +43,11 @@
 
 <!-- Container -->
 <div id="container">
-
+{% block logoblock %}{% endblock %}
     {% if not is_popup %}
     <!-- Header -->
     <div id="header" style="background:#2b6988;align-items:  center;">
-		<img src="{% static 'images/logo.svg' %}" style="width: 15%;max-width: 582px;max-height: inherit;height: 100%;"/>
+		<img src="{% static 'images/logo.svg' %}" style="width: 10%;max-width: 582px;max-height: initial;height: inherit;"/>
         <div id="branding">
         {% block branding %}{% endblock %}
         </div>
