@@ -35,5 +35,5 @@ if settings.DEBUG:
 		path('__debug__/', include(debug_toolbar.urls)),
 		# path('', include(debug_toolbar.urls)),
    ]
-handler404 = inventoryManagement_views.error_404
-handler500 = inventoryManagement_views.error_500
+# handler404 = inventoryManagement_views.error_404
+# handler500 = inventoryManagement_views.error_500
