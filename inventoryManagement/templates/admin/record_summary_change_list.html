@@ -6,14 +6,18 @@
 {% block content_title %}
     <h1> Summary Of Inventory In Departments </h1>
 {% endblock %}
-{% block result_list %}
-	<div id="graphResults">
+{% block graph-tools %}
+	<div id="graphResults" style="display:block">
+		<H2>Graph</H2>
 		<canvas id="summaryBarChart">
 		</canvas>
 	</div>
+{% endblock %}
+{% block result_list %}
+
     <div class=”results” style="width:80%">
+		<H2>Results</H2>
 		<table>
-			
 			<thead>
 			  <tr>
 				<th>
