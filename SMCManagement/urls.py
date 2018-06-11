@@ -18,8 +18,8 @@ from django.urls import include, path
 from django.conf import settings
 
 
-from inventoryManagement import views as inventoryManagement_views
-from django.conf.urls import handler404, handler500
+# from inventoryManagement import views as inventoryManagement_views
+# from django.conf.urls import handler404, handler500
 
 admin.site.site_header = 'SMC Inventory Management System'
 admin.site.site_title = 'Portal'
