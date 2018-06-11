@@ -1,29 +1,10 @@
 window.onload = function(){
-	tbodyTaggedElements = document.getElementsByTagName("tbody")[1]
+	tbodyTaggedElements = document.getElementsByTagName("tbody")[0];
 	trTaggedElements = tbodyTaggedElements.children;
 	length = trTaggedElements.length; 
 	var i;
 	var j;
-
-					// let rowInfo = [];
-					// function addRecord(department, device, total) {
-					  // rowInfo.push({department, device, total});
-					// }
 	var labelList = [];
-					// function addLabel(department) {
-					  // labelList.push({department});
-					// }
-					// let PCList = [];
-					// function addDataset(total) {
-					  // datasetList.push({total});
-					// }
-
-					// let LaptopList = [];
-					// function addDataset(total) {
-					  // datasetList.push({total});
-					// }
-
-					// let AIOList = [];
 
 
 	for(i=0;i<length;i++)
@@ -33,14 +14,6 @@ window.onload = function(){
 		tempDepartment = tempRow.children[0].innerText;
 		tempDevice = tempRow.children[1].innerText;
 		tempTotal = tempRow.children[2].innerText;
-					// addRecord(tempRow.children[0].innerText,tempRow.children[1].innerText,tempRow.children[2].innerText);
-					// labelList.push(tempRow.children[0].innerText);
-					// if(tempRow.children[1].innerText == "Personal Computer")
-						// PCList.push(tempRow.children[2].innerText);
-					// else if(tempRow.children[1].innerText == "Laptop")
-						// LaptopList.push(tempRow.children[2].innerText);
-					// else
-						// AIOList.push(tempRow.children[2].innerText);
 		if(!labelList[tempDepartment])
 		{
 			labelList[tempDepartment] = {lt:0,pc:0,aio:0};
@@ -77,7 +50,7 @@ window.onload = function(){
 
 
 
-	var ctx = document.getElementById("myChart").getContext('2d');
+	var ctx = document.getElementById("summaryBarChart").getContext('2d');
 	var myChart = new Chart(ctx, {
 		type: 'bar',
 		data: {
