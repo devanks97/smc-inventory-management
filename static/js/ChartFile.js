@@ -1,4 +1,4 @@
-window.onload = function(){
+function makeChart(){
 	tbodyTaggedElements = document.getElementsByTagName("tbody")[0];
 	trTaggedElements = tbodyTaggedElements.children;
 	length = trTaggedElements.length; 

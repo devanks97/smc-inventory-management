@@ -46,4 +46,4 @@
 		</table>
 	</div>
 {% endblock %}
-{% block pagination %}<script src="{% static 'js/chartFile.min.js' %}">{% endblock %}
+{% block pagination %}<script src="{% static 'js/chartFile.min.js' %}">document.onload = makeChart();</script>{% endblock %}
