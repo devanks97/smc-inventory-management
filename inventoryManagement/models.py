@@ -29,6 +29,9 @@ class record(models.Model):
     def device_list(self):
         return self.device
     history = HistoricalRecords()
+    class Meta:
+        verbose_name = 'Record Of Inventory'
+        verbose_name_plural = 'Records Of Inventory'
 class recordSummary(record):
     class Meta:
 	        proxy = True
