@@ -4,8 +4,8 @@ from simple_history.models import HistoricalRecords
 from django.core.validators import MinValueValidator
 
 class record(models.Model):
-    deviceID = models.CharField(max_length=30)
     name = models.CharField(max_length=200)
+<<<<<<< HEAD
     department = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
