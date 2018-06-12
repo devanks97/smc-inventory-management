@@ -175,3 +175,14 @@ DATABASES['default'].update(db_from_env)
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#cache optmization
+def cache_images_forever(headers, path, url):
+    """Force images to be cached forever"""
+    tokens = path.split(".")
+    if len(tokens) > 1:
+        extension = tokens[-1].lower()
+        if extension in ('png', 'jpg', 'jpeg', 'ico', 'gif'):
+            headers['Cache-Control'] = 'public, max-age=315360000'    
+
+WHITENOISE_ADD_HEADERS_FUNCTION = cache_images_forever
