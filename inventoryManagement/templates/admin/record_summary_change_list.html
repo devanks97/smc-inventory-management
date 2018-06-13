@@ -9,7 +9,8 @@
 {% block graph-tools %}
 	<div id="graphResults" style="display:block">
 		<H2>Graph</H2>
-		<canvas id="summaryBarChart">
+		<button id="activateChart" onclick="renderCanvas()">Render Bar Chart</button>
+		<canvas style="display:hidden" id="summaryBarChart">
 		</canvas>
 	</div>
 {% endblock %}
