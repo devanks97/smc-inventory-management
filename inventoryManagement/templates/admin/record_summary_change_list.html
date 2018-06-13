@@ -7,8 +7,8 @@
     <h1> Summary Of Inventory In Departments </h1>
 {% endblock %}
 {% block graph-tools %}
-	<script>
-		document.onload = function(){document.getElementById("graphResults").style.display = "block";}
+	<script defer="defer">
+		function displayRenderGraphButton(){document.getElementById("graphResults").style.display = "block";}
 	</script>
 	<div id="graphResults" style="display:none">
 		<H2>Graph</H2>
@@ -19,7 +19,7 @@
 {% endblock %}
 {% block result_list %}
 
-    <div class=”results” style="width:80%">
+    <div class=”results” style="width:80%" onload="displayRenderGraphButton()">
 		<H2>Results</H2>
 		<table>
 			<thead>
