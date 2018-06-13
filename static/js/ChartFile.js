@@ -50,8 +50,9 @@ function renderCanvas(){
 	}
 
 
-
-	var ctx = document.getElementById("summaryBarChart").getContext('2d');
+	var summaryBarChartElement = document.getElementById("summaryBarChart");
+	summaryBarChartElement.style.display = "block";
+	var ctx = summaryBarChartElement.getContext('2d');
 	var myChart = new Chart(ctx, {
 		type: 'bar',
 		data: {

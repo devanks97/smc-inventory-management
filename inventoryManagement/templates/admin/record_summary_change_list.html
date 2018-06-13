@@ -7,10 +7,13 @@
     <h1> Summary Of Inventory In Departments </h1>
 {% endblock %}
 {% block graph-tools %}
-	<div id="graphResults" style="display:block">
+	<script>
+		document.onload = function(){document.getElementById("graphResults").style.display = "block";}
+	</script>
+	<div id="graphResults" style="display:none">
 		<H2>Graph</H2>
 		<button id="activateChart" onclick="renderCanvas()">Render Bar Chart</button>
-		<canvas style="display:hidden" id="summaryBarChart">
+		<canvas style="display:none" id="summaryBarChart">
 		</canvas>
 	</div>
 {% endblock %}
