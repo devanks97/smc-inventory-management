@@ -155,6 +155,11 @@ USE_TZ = True
 #Change session engine to cookie based
 SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 
+# Production Level Changes
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
