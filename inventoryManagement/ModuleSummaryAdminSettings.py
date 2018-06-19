@@ -1,15 +1,15 @@
 from django.contrib import admin
 from django.db.models import Count
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-from .ListFilterAdminSettings import InputFilter #Custom filter list
-from .ListFilterAdminSettings import DepartmentFilter
+# <<<<<<< HEAD
+# <<<<<<< HEAD
+# from .ListFilterAdminSettings import InputFilter #Custom filter list
+# from .ListFilterAdminSettings import DepartmentFilter
 
-=======
->>>>>>> parent of 0784a0e... Change filter
-=======
->>>>>>> parent of 0784a0e... Change filter
+# =======
+# >>>>>>> parent of 0784a0e... Change filter
+# =======
+# >>>>>>> parent of 0784a0e... Change filter
 class recordSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/record_summary_change_list.html'
     list_display = ['department', 'device']
