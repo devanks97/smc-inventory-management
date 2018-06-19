@@ -14,7 +14,7 @@ class InputFilter(admin.SimpleListFilter):
             if k != self.parameter_name
         )
         yield all_choice
-class DepartmentFilter(InputFilter):
+class DepartmentFilter(InputFilter)
     parameter_name = 'department'
 	title = _('Department')
 	
