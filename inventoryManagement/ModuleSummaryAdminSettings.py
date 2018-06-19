@@ -14,7 +14,7 @@ class recordSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/record_summary_change_list.html'
     list_display = ['department', 'device']
     list_filter = (
-        'device',DepartmentFilter,'year'
+        'device','department','year'
     )
     def changelist_view(self, request, extra_context=None):
         response = super().changelist_view(
