@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 't$ct%q$*2h=yegf_yn@1g$a+!^w4s-
 # DEBUG = False
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 DEBUG_PROPAGATE_EXCEPTIONS = True
-ALLOWED_HOSTS = ["localhost","smc-inventory-management.herokuapp.com","smc-inventory-management-beta.herokuapp.com"]
+ALLOWED_HOSTS = ["localhost","smc-grappelli-beta.herokuapp.com","smc-inventory-management.herokuapp.com","smc-inventory-management-beta.herokuapp.com"]
 
 ADMINS = [('DevanKS', 'devanks97@gmail.com')]
 #CHECK IF DEBUG
@@ -51,6 +51,7 @@ if DEBUG:
 from .logging_settings import *
 # Application definition
 INSTALLED_APPS = [
+    'grappelli',
     'inventoryManagement.apps.InventorymanagementConfig',
     'import_export',
     'simple_history',

@@ -28,6 +28,7 @@ admin.site.site_title = 'Portal'
 urlpatterns = [
     #path('inventoryManagement/', include('inventoryManagement.urls')),
     path('', admin.site.urls),
+    path('grappelli/', include('grappelli.urls')), # grappelli URLS
 ]
 if settings.DEBUG:
    import debug_toolbar
