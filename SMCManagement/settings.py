@@ -185,7 +185,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #cache optmization
 def cache_images_forever(headers, path, url):
-    """Force images to be cached forever"""
+    #Force images to be cached forever
     tokens = path.split(".")
     if len(tokens) > 1:
         extension = tokens[-1].lower()
