@@ -7,14 +7,18 @@
     <h1> Summary Of Inventory In Departments </h1>
 {% endblock %}
 {% block graph-tools %}
-	<div id="graphResults" style="display:block">
+	<div id="graphResults">
 		<H2>Graph</H2>
-		<canvas id="summaryBarChart">
+		<button id="closeChart" onclick="hideCanvas()" style="display:none">Close chart</button>
+		<button id="activateChart" onclick="renderCanvas()" style="margin-bottom: 20px">Render Bar Chart</button>
+		<canvas style="display:none" id="summaryBarChart">
 		</canvas>
 	</div>
 {% endblock %}
 {% block result_list %}
-    <div class=”results” style="width:80%">
+
+    <div class=”results” style="width:80%" onload="displayRenderGraphButton()">
+
 		<H2>Results</H2>
 		<table>
 			<thead>
