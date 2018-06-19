@@ -2,9 +2,12 @@ from django.contrib import admin
 from django.db.models import Count
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 from .ListFilterAdminSettings import InputFilter #Custom filter list
 from .ListFilterAdminSettings import DepartmentFilter
 
+=======
+>>>>>>> parent of 0784a0e... Change filter
 =======
 >>>>>>> parent of 0784a0e... Change filter
 class recordSummaryAdmin(admin.ModelAdmin):
