@@ -14,3 +14,11 @@ class InputFilter(admin.SimpleListFilter):
             if k != self.parameter_name
         )
         yield all_choice
+class DepartmentFilter(InputFilter)
+    parameter_name = 'department'
+	title = _('Department')
+	
+    def queryset(self, request, queryset):
+        if self.value() is not None:
+            department = self.value()
+            return queryset.filter(Q(department=department))

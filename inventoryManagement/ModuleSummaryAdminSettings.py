@@ -2,12 +2,13 @@ from django.contrib import admin
 from django.db.models import Count
 
 from .ListFilterAdminSettings import InputFilter #Custom filter list
+from .ListFilterAdminSettings import DepartmentFilter
 
 class recordSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/record_summary_change_list.html'
     list_display = ['department', 'device']
     list_filter = (
-        'device','department','year'
+        'device',DepartmentFilter,'year'
     )
     def changelist_view(self, request, extra_context=None):
         response = super().changelist_view(
