@@ -16,8 +16,8 @@ class InputFilter(admin.SimpleListFilter):
         yield all_choice
 class DepartmentFilter(InputFilter):
     parameter_name = 'department'
-	title = _('Department')
-	
+    title = _('Department')
+    
     def queryset(self, request, queryset):
         if self.value() is not None:
             department = self.value()
