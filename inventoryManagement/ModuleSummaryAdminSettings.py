@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.db.models import Count
 
+from .ListFilterAdminSettings import InputFilter #Custom filter list
+
 class recordSummaryAdmin(admin.ModelAdmin):
     change_list_template = 'admin/record_summary_change_list.html'
     list_display = ['department', 'device']
@@ -16,7 +18,7 @@ class recordSummaryAdmin(admin.ModelAdmin):
             qs = response.context_data['cl'].queryset
         except (AttributeError, KeyError):
             return response
-	
+    
         response.context_data['summary'] = list(
         qs
         .values('department','device')
