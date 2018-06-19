@@ -52,6 +52,7 @@ function renderCanvas(){
 
 	var summaryBarChartElement = document.getElementById("summaryBarChart");
 	summaryBarChartElement.style.display = "block";
+	document.getElementById("closeChart").style.display = "block";
 	var ctx = summaryBarChartElement.getContext('2d');
 	var myChart = new Chart(ctx, {
 		type: 'bar',
@@ -91,4 +92,10 @@ function renderCanvas(){
 			}
 		}
 	});
+}
+function hideCanvas(){
+	var summaryBarChartElement = document.getElementById("summaryBarChart");
+	summaryBarChartElement.style.display = "none";
+	document.getElementById("closeChart").style.display = "none";
+	document.getElementById("activateChart").style.display = "block";
 }
