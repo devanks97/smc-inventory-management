@@ -109,4 +109,4 @@ venv.bak/
 #Database
 *.sqlite3
 #Static files
-#staticfiles/
+staticfiles/
