@@ -36,19 +36,17 @@ if DEBUG:
 
     # Debug Toolbar Activate
 
-    from .debug_toolbar_settings import *
+    from .extraSettings.debug_toolbar_settings import *
     #DEBUG TOOLBAR CODE ENDS
-
-
 
     #LOGGING CODE STARTS
 
-    from .logging_settings import *
+    from .extraSettings.logging_settings import *
 
     #Logging Code ENDS
 
 #DEBUG EXTRA CODE ENDS
-from .logging_settings import *
+
 # Application definition
 INSTALLED_APPS = [
     'inventoryManagement.apps.InventorymanagementConfig',
@@ -109,16 +107,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'django',
-#        'USER': 'devanks',
-#        'PASSWORD': 'devanks',
-#        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-#        'PORT': '3306',
-#    }
 }
-
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -173,11 +166,6 @@ STATIC_URL =  '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
