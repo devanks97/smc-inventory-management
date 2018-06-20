@@ -21,6 +21,7 @@ class recordAdmin(ImportExportActionModelAdmin):
     list_display = ['name', 'department', 'year', 'device']
     list_filter = ('department', 'year', 'device')
     search_fields = ('name', 'department')
+    show_full_result_count = False
     pass
 
 admin.site.register(record,recordAdmin)
