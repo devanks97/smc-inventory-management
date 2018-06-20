@@ -9,6 +9,7 @@ from import_export import resources
 
 from .ModuleAdminSettings import ImportExportActionModelAdmin
 from .ModuleSummaryAdminSettings import recordSummaryAdmin
+from .ModuleCachingPaginatorSettings import 
 
 class RecordResource(resources.ModelResource):
 
@@ -22,6 +23,7 @@ class recordAdmin(ImportExportActionModelAdmin):
     list_filter = ('department', 'year', 'device')
     search_fields = ('name', 'department')
     show_full_result_count = False
+    paginator = CachingPaginator
     pass
 
 admin.site.register(record,recordAdmin)
