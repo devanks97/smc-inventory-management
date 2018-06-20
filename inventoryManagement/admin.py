@@ -7,9 +7,9 @@ from .models import recordSummary
 
 from import_export import resources
 
-from .ModuleExportActionModelAdminSettings import ImportExportActionModelAdmin
-from .ModuleSummaryAdminSettings import recordSummaryAdmin
-from .ModuleCachingPaginatorSettings import CachingPaginator
+from adminFiles.ModuleExportActionModelAdminSettings import ImportExportActionModelAdmin
+from adminFiles.ModuleSummaryAdminSettings import recordSummaryAdmin
+from adminFiles.ModuleCachingPaginatorSettings import CachingPaginator
 
 class RecordResource(resources.ModelResource):
 
