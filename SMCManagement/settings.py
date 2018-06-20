@@ -66,6 +66,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+
 from .extraSettings.staticFilesSettings import *
 
 from .extraSettings.productionLevelChanges import *
