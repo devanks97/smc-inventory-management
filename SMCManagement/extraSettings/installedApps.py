@@ -1,5 +1,6 @@
 INSTALLED_APPS = [
     'inventoryManagement.apps.InventorymanagementConfig',
+    'admin_view_permission',
     'import_export',
     'simple_history',
     'django_extensions',

@@ -6,6 +6,7 @@ from django.core.validators import MinValueValidator
 class record(models.Model):
     name = models.CharField(max_length=200)
     department = models.CharField(max_length=50)
+    location = models.CharField(max_length=50)
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
     pc = 'Personal Computer'
     lt = 'Laptop'

@@ -19,7 +19,7 @@ class RecordResource(resources.ModelResource):
        
 class recordAdmin(ImportExportActionModelAdmin):
     #resource_class = RecordResource
-    list_display = ['name', 'department', 'year', 'device']
+    list_display = ['name', 'department', 'year', 'device', 'location']
     list_filter = ('department', 'year', 'device')
     search_fields = ('name', 'department')
     show_full_result_count = False
