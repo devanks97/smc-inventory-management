@@ -21,33 +21,39 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+<!-- Favicon based code -END- -->
 <title>{% block title %}{% endblock %}</title>
 <link rel="stylesheet" type="text/css" href='{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}' />
 {% block extrastyle %}{% endblock %}
 {% if LANGUAGE_BIDI %}
-<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />
+<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'admin/css/rtl.css' %}{% endblock %}" />
 {% endif %}
 {% block extrahead %}{% endblock %}
 {% block responsive %}
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive.css' %}" />
     {% if LANGUAGE_BIDI %}
-	<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive_rtl.css' %}" />
 	{% endif %}
 {% endblock %}
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 </head>
 
-<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
-  data-admin-utc-offset="{% now "Z" %}">
-
+<body onload="bodyLoaded()" style="background-image: url('{% static 'images/logoBG.svg' %}'); background-repeat: no-repeat;background-position-y: 100%;background-position-x: 50%;" class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+  data-admin-utc-offset='{% now "Z" %}'>
+<!-- {% block preloadLogo %}{% endblock %} -->
 <!-- Container -->
 <div id="container">
-{% block logoblock %}{% endblock %}
     {% if not is_popup %}
     <!-- Header -->
     <div id="header" style="background:#2b6988;align-items:  center;">
-		<img src="{% static 'images/logo.svg' %}" style="width: 10%;max-width: 582px;max-height: initial;height: inherit;"/>
+		<!--LOGO SVG CODE-->
+		<svg id="logo" class="logoSVG" viewBox="84 -1 496 647"  style="width: 50px; height: 100%;" preserveAspectRatio="xMidYMid meet" width="500" height="653" version="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<path id="greenBCurve" FILL="#07b360" d="M406 543C437 483 445 425 405 381 386 361 361 353 275 300 173 237 152 223 125 198 98 172 85 146 85 119 85 98 93 77 109 57 113 52 131 33 164 0 150 18 141 28 137 33 128 44 122 56 119 70 119 70 119 70 119 70 119 70 119 70 119 70 116 82 119 94 125 105 127 107 128 110 129 111 136 125 147 134 162 148 176 162 351 274 373 289 435 328 460 348 472 379 477 392 478 394 478 422 478 448 475 454 472 466 465 490 448 515 421 548 405 567 380 593 378 593 377 593 378 589 381 585 384 581 388 574 391 569 394 565 401 553 406 543Z"/>
+			<path id="orangeMCurve" FILL="#f0962a" d="M448 533C447 506 390 485 384 483 370 477 356 467 342 455 324 439 321 412 334 392 338 387 340 383 342 381 350 373 363 361 364 362 364 362 360 369 352 381 348 388 345 397 345 405 345 408 345 401 345 403 345 412 349 422 356 428 370 441 388 453 410 462 418 466 429 471 441 476 469 489 483 521 471 549 469 556 465 562 461 567 443 585 381 643 377 643 376 643 384 634 394 624 410 609 449 562 448 533Z"/>
+			<path id="blueSCurve" FILL="#2faee1" d="M530 424C553 376 546 334 520 302 508 286 503 286 448 247 413 222 387 204 368 190 355 181 342 169 331 156 324 147 335 160 331 156 311 131 310 95 331 69 333 66 336 63 338 61 349 49 359 40 369 32 370 31 371 33 371 34 367 40 363 44 360 48 354 56 350 66 348 76 348 76 348 76 348 76 348 77 347 78 347 78 346 86 347 94 351 100 352 103 354 105 354 107 358 117 366 124 375 134 384 145 496 228 511 239 550 268 566 282 573 306 577 315 577 317 577 338 578 357 575 362 573 370 569 389 561 402 541 428 529 444 511 465 509 465 508 465 509 462 511 459 513 455 517 449 519 446 521 442 526 432 530 424Z"/>
+		</svg>
+		<!--LOGO SVG CODE END-->
         <div id="branding">
         {% block branding %}{% endblock %}
         </div>
@@ -60,7 +66,7 @@
             {% endblock %}
             {% block userlinks %}
                 {% if site_url %}
-                    <a href="{{ site_url }}">{% trans 'View site' %}</a> /
+                    <a href="{{ site_url }}">{% trans 'Home Page' %}</a> /
                 {% endif %}
                 {% if user.is_active and user.is_staff %}
                     {% url 'django-admindocs-docroot' as docsroot %}
