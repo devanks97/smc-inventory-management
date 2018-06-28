@@ -39,9 +39,10 @@
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 </head>
 
-<body onload="bodyLoaded()" style="background-image: url('{% static 'images/logoBG.svg' %}'); background-repeat: no-repeat;background-position-y: 100%;background-position-x: 50%;" class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+
+<body onload="bodyLoaded()" style="background-image: url('{% static 'images/logoBG.svg' %}'); background-repeat: no-repeat;background-position-y: 50px;background-position-x: 50%;" class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
   data-admin-utc-offset='{% now "Z" %}'>
-<!-- {% block preloadLogo %}{% endblock %} -->
+{% block preloadLogo %}{% endblock %}
 <!-- Container -->
 <div id="container">
     {% if not is_popup %}
