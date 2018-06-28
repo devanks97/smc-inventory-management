@@ -39,8 +39,7 @@
 {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
 </head>
 
-
-<body onload="bodyLoaded()" style="background-image: url('{% static 'images/logoBG.svg' %}'); background-repeat: no-repeat;background-position-y: 50px;background-position-x: 50%;" class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+<body onload="bodyLoaded()" style="background-image: url('{% static 'images/logoBG.svg' %}'); background-repeat: no-repeat;background-position: 50% 100px;" class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
   data-admin-utc-offset='{% now "Z" %}'>
 {% block preloadLogo %}{% endblock %}
 <!-- Container -->
@@ -103,7 +102,7 @@
     {% endblock messages %}
 
     <!-- Content -->
-    <div id="content" class="{% block coltype %}colM{% endblock %}" style="width:auto">
+    <div id="content" class="{% block coltype %}colM{% endblock %}" style="opacity:0.8;width:auto">
         {% block pretitle %}{% endblock %}
         {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
 		<div style="display:flex">
