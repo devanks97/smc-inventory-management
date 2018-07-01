@@ -69,14 +69,14 @@
 		{% block date_hierarchy %}{% date_hierarchy cl %}{% endblock %}
 
 		{% block filters %}
-			{% cache 300 admin_filters request.GET.items request.path request.user.username %}
-				{% if cl.has_filters %}
-				  <div id="changelist-filter">
-					<h2>{% trans 'Filter' %}</h2>
+			{% if cl.has_filters %}
+			  <div id="changelist-filter">
+				<h2>{% trans 'Filter' %}</h2>
+				{% cache 500 admin_filters request.GET.items request.path request.user.username %}
 					{% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
-				  </div>
-				{% endif %}
-			{% endcache %}
+				{% endcache %}
+			  </div>
+			{% endif %}
 		{% endblock %}
 
       <form id="changelist-form" style="flex-grow: 2;padding-right: 10%;" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}

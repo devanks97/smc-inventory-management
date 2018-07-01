@@ -2,7 +2,14 @@
 {% load i18n %}
 {% load static from staticfiles %}
 {% load humanize %}
-{% block object-tools %}{% endblock %}
+{% block object-tools %}
+	<!--NOT A PART OF OBJECT TOOLS. JUST USING THE BLOCK-->
+	<style>
+	tr:nth-child(even) {
+    background-color: #eee
+}
+	</style>
+{% endblock %}
 {% block content_title %}
     <h1> Summary Of Inventory In Departments </h1>
 {% endblock %}
@@ -18,34 +25,46 @@
 {% endblock %}
 {% block result_list %}
 
-    <div class=”results” style="width:80%" onload="displayRenderGraphButton()">
+    <div class="results" style="width:80%" onload="displayRenderGraphButton()">
 
 		<H2>Results</H2>
-		<table>
+		<table id="graphResultsTable">
 			<thead>
 			  <tr>
-				<th>
-				  <div class=”text”>
-					<a href=”#”>Department</a>
-				  </div>
+				<th class="sortable column-department" scope="col">
+					<div class="sortoptions">
+						<a title="Remove from sorting" class="sortremove" href="?o="></a>
+						<a title="Present sort" class="toggle"></a>
+					</div>
+					<div class="text">
+						<a onclick="sortTable(0)">Department</a>
+					</div>
 				</th>
-				<th>
-				  <div class=”text”>
-					<a href=”#”>Device</a>
-				  </div>
+				<th class="sortable column-device" scope="col">
+					<div class="sortoptions">
+						<a title="Remove from sorting" class="sortremove" href="?o="></a>
+						<a title="Present sort" class="toggle"></a>
+					</div>
+					<div class="text">
+						<a onclick="sortTable(1)">Device</a>
+					</div>
 				</th>
-				<th>
-				  <div class=”text”>
-					<a href=”#”>Total</a>
-				  </div>
+				<th class="sortable column-total" scope="col">
+					<div class="sortoptions">
+						<a title="Remove from sorting" class="sortremove" href="?o="></a>
+						<a title="Present sort" class="toggle"></a>
+					</div>
+					<div class="text">
+						<a onclick="sortTable(2)">Total</a>
+					</div>
 				</th>
 			  </tr>
 			</thead>
 			<tbody>
 			  {% for row in summary %}
-			  <tr class="{% cycle 'row1' 'row2' %}">
-				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}"> {{ row.department }} </a></td>
-				<td> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}&device__exact={{ row.device }}"> {{ row.device }} </a> </td>
+			  <tr class="{{ row.department }}_{{ row.device }}">
+				<td class="{{ row.department }}"> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}"> {{ row.department }} </a></td>
+				<td class="{{ row.device }}"> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}&device__exact={{ row.device }}"> {{ row.device }} </a> </td>
 				<td> {{ row.total | intcomma }} </td>
 			  </tr>
 			  {% endfor %}
@@ -53,6 +72,6 @@
 		
 		</table>
 	</div>
-	<script type="text/javascript" src="{% static 'js/chartFile.min.js' %}" defer="defer"></script>
+	<script type="text/javascript" src="{% static 'js/SortChart.min.js' %}" defer="defer"></script>
 {% endblock %}
 {% block pagination %}{% endblock %}

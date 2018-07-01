@@ -61,21 +61,21 @@ function renderCanvas(){
 			datasets: [{
 				label: 'PC',
 				data: departmentListPC,
-				backgroundColor:'rgba(255, 99, 132, 0.2)',
+				backgroundColor:'rgba(255, 99, 132, 0.5)',
 				borderColor:'rgba(255,99,132,1)',
 				borderWidth: 1
 			},
 			{
 				label: 'Laptop',
 				data: departmentListLaptop,
-				backgroundColor:'rgba(54, 162, 235, 0.2)',
+				backgroundColor:'rgba(54, 162, 235, 0.5)',
 				borderColor:'rgba(54, 162, 235, 1)',
 				borderWidth: 1
 			},
 			{
 				label: 'All In One',
 				data: departmentListAIO,
-				backgroundColor:'rgba(255, 206, 86, 0.2)',
+				backgroundColor:'rgba(255, 206, 86, 0.5)',
 				borderColor:'rgba(255, 206, 86, 1)',
 				borderWidth: 1
 			}
