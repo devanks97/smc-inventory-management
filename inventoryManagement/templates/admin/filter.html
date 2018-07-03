@@ -3,7 +3,7 @@
 <div class="dropdown">
 	<input onclick="toggleDropdown(this)" type="text" style="margin: 0 15px;margin-bottom: 10px;" placeholder="Search.." id="searchbar" onkeyup="filterFunction(this)">
 	<div id="filterProbableDropdownList" class="dropdown-content">
-		<ul>
+		<ul id="dropdownUL_{% blocktrans with filter_title=title %}{{ filter_title }}{% endblocktrans %}">
 		{% for choice in choices %}
 			<li{% if choice.selected %} class="selected"{% endif %}>
 				<a href="{{ choice.query_string|iriencode }}" title="{{ choice.display }}">{{ choice.display }}</a>

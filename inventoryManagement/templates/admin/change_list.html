@@ -64,14 +64,14 @@
         </p>
         {{ cl.formset.non_form_errors }}
     {% endif %}
-    <div class="module{% if cl.has_filters %} filtered{% endif %}" id="changelist">
+    <div style="min-height:20px;" class="module{% if cl.has_filters %} filtered{% endif %}" id="changelist">
 		{% block search %}{% search_form cl %}{% endblock %}
 		{% block date_hierarchy %}{% date_hierarchy cl %}{% endblock %}
 
 		{% block filters %}
 			{% if cl.has_filters %}
 			  <div id="changelist-filter">
-				<h2>{% trans 'Filter' %}</h2>
+				<h2 style="padding:8px;">{% trans 'Filter' %}</h2>
 				{% cache 500 admin_filters request.GET.items request.path request.user.username %}
 					{% for spec in cl.filter_specs %}{% admin_list_filter cl spec %}{% endfor %}
 				{% endcache %}
@@ -79,7 +79,7 @@
 			{% endif %}
 		{% endblock %}
 
-      <form id="changelist-form" style="flex-grow: 2;padding-right: 10%;" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
+      <form id="changelist-form" style="flex-grow: 2;padding-right: 240px;" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
       {% if cl.formset %}
         <div>{{ cl.formset.management_form }}</div>
       {% endif %}

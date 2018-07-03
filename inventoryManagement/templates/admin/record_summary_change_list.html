@@ -14,20 +14,36 @@
     <h1> Summary Of Inventory In Departments </h1>
 {% endblock %}
 {% block graph-tools %}
+<style>
+	.graphButtons
+	{
+		background: rgb(153, 153, 153);
+		padding: 6px 12px;
+		color: rgb(255, 255, 255);
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		font-size: 11px;
+		margin-bottom: 20px;
+		display: block;
+		border-radius: 15px;
+		border: none;
+		cursor: pointer;
+	}
+</style>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" defer="defer"></script>
 	<div id="graphResults">
 		<H2>Graph</H2>
-		<button id="closeChart" onclick="hideCanvas()" style="display:none">Close chart</button>
-		<button id="activateChart" onclick="renderCanvas()" style="margin-bottom: 20px">Render Bar Chart</button>
+		<button class="graphButtons" id="closeChart" onclick="hideCanvas()" style="display:none">Close chart</button>
+		<button class="graphButtons" id="activateChart" onclick="renderCanvas()" style="margin-bottom: 20px">Render Bar Chart</button>
 		<canvas style="display:none" id="summaryBarChart">
 		</canvas>
 	</div>
 {% endblock %}
 {% block result_list %}
 
-    <div class="results" style="width:80%" onload="displayRenderGraphButton()">
+    <div class="results" style="padding-right: 20px; margin-right: 0px;" onload="displayRenderGraphButton()">
 
-		<H2>Results</H2>
+		<H2 style="font-size:14px;text-transform:uppercase">Results</H2>
 		<table id="graphResultsTable">
 			<thead>
 			  <tr>
@@ -63,9 +79,9 @@
 			<tbody>
 			  {% for row in summary %}
 			  <tr class="{{ row.department }}_{{ row.device }}">
-				<td class="{{ row.department }}"> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}"> {{ row.department }} </a></td>
-				<td class="{{ row.device }}"> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department }}&device__exact={{ row.device }}"> {{ row.device }} </a> </td>
-				<td> {{ row.total | intcomma }} </td>
+				<td class="{{ row.department }}"> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department|iriencode }}">{{ row.department }}</a></td>
+				<td class="{{ row.device }}"> <a href="{%url 'admin:inventoryManagement_record_changelist' %}?department={{ row.department|iriencode }}&device__exact={{ row.device|iriencode }}">{{ row.device }}</a> </td>
+				<td>{{ row.total | intcomma }}</td>
 			  </tr>
 			  {% endfor %}
 			</tbody>
