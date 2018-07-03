@@ -15,7 +15,7 @@ class deviceList(models.Model):
 
 
 class record(models.Model):
-    name = models.CharField(max_length=200,validators=[validate_correct_text])
+    name = models.CharField(max_length=200,validators=[validate_correct_text],unique=True)
     department = models.CharField(max_length=50,validators=[validate_correct_text])
     location = models.CharField(max_length=50,validators=[validate_correct_text])
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
