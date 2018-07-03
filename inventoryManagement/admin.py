@@ -24,7 +24,7 @@ class RecordResource(resources.ModelResource):
 
 
 class deviceListAdmin(admin.ModelAdmin):
-    list_display = ['id','deviceName']
+    list_display = ['deviceName']
     show_full_result_count = False
     paginator = CachingPaginator
     pass
