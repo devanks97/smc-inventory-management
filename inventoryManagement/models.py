@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator,RegexValidator
 validate_correct_text = RegexValidator(regex='^([a-zA-Z0-9]+\s)*[a-zA-Z0-9]+$',message='The text must start with, and end with, a alphanumeric character. There should NOT be any consecutive spaces too.',code='invalid_text')
 
 class deviceList(models.Model):
-    deviceName = models.CharField(max_length=50,unique=True,validators=[validate_correct_text])
+    deviceName = models.CharField(primary_key=True,max_length=50,validators=[validate_correct_text])
     def __str__(self):
         return self.deviceName
     class Meta:
@@ -19,7 +19,7 @@ class record(models.Model):
     department = models.CharField(max_length=50,validators=[validate_correct_text])
     location = models.CharField(max_length=50,validators=[validate_correct_text])
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
-    device = models.ForeignKey(deviceList,on_delete=models.CASCADE,to_field="deviceName")
+    device = models.ForeignKey(deviceList,on_delete=models.CASCADE)
     def __str__(self):
         return self.name
     def department_list(self):
