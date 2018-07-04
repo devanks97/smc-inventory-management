@@ -24,11 +24,11 @@ class RecordResource(resources.ModelResource):
         import_id_fields = ('name',)
         skip_unchanged = True
         report_skipped = True
-    def before_import(self, dataset, using_transactions, dry_run, **kwargs):
-        for row in dataset:
-            for x in range(0, 2):
-                if bool(re.match(r"^([a-zA-Z0-9]+\s)*[a-zA-Z0-9]+$", row[x])) == False:
-                    raise ValidationError('The text must start with, and end with, a alphanumeric character. There should NOT be any consecutive spaces too.')
+    # def before_import(self, dataset, using_transactions, dry_run, **kwargs):
+        # for row in dataset:
+            # for x in range(0, 2):
+                # if bool(re.match(r"^([a-zA-Z0-9]+\s)*[a-zA-Z0-9]+$", row[x])) == False:
+                    # raise ValidationError('The text must start with, and end with, a alphanumeric character. There should NOT be any consecutive spaces too.')
 class deviceListAdmin(admin.ModelAdmin):
     list_display = ['deviceName']
     show_full_result_count = False
