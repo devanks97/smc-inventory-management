@@ -30,7 +30,7 @@ class deviceListResource(resources.ModelResource):
         skip_unchanged = True
         report_skipped = True
 
-class deviceListAdmin(admin.ModelAdmin):
+class deviceListAdmin(ImportExportActionModelAdmin):
     list_display = ['deviceName']
     show_full_result_count = False
     paginator = CachingPaginator
