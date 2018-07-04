@@ -26,7 +26,6 @@ class deviceListResource(resources.ModelResource):
 
     class Meta:
         model = deviceList
-        exclude = ('id', )
         skip_unchanged = True
         report_skipped = True
 
