@@ -26,10 +26,13 @@ class deviceListResource(resources.ModelResource):
 
     class Meta:
         model = deviceList
+        # fields = ('name','department','location','year','device__deviceName')
+        exclude = ('id', )
+        import_id_fields = ('name',)
         skip_unchanged = True
         report_skipped = True
 
-class deviceListAdmin(ImportExportActionModelAdmin):
+class deviceListAdmin(admin.ModelAdmin):
     list_display = ['deviceName']
     show_full_result_count = False
     paginator = CachingPaginator
