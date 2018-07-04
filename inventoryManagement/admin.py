@@ -21,7 +21,7 @@ class RecordResource(resources.ModelResource):
         model = record
         # fields = ('name','department','location','year','device__deviceName')
         exclude = ('id', )
-        import_id_fields = ('name','department','year')
+        import_id_fields = ('name',)
         skip_unchanged = True
         report_skipped = True
     # def before_import(self, dataset, using_transactions, dry_run, **kwargs):
