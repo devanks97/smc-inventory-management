@@ -2,6 +2,12 @@
 {% load i18n admin_urls admin_list cache %}
 {% load static from staticfiles %}
 {% block extrastyle %}
+<style>
+.results
+{
+	max-height:500px;
+}
+</style>
   <script type="text/javascript" src="{% static 'js/dropdownFilter.min.js' %}"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'css/dropdownFilter.min.css' %}" />
   {{ block.super }}
