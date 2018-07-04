@@ -22,6 +22,13 @@ class RecordResource(resources.ModelResource):
         skip_unchanged = True
         report_skipped = True
 
+class deviceListResource(resources.ModelResource):
+
+    class Meta:
+        model = deviceList
+        exclude = ('id', )
+        skip_unchanged = True
+        report_skipped = True
 
 class deviceListAdmin(admin.ModelAdmin):
     list_display = ['deviceName']
