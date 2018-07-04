@@ -26,7 +26,7 @@ class RecordResource(resources.ModelResource):
     def before_import(self, dataset, using_transactions, dry_run, **kwargs):
         for row in dataset:
             for x in range(0, 2):
-                if re.match(r"^([a-zA-Z0-9]+\s)*[a-zA-Z0-9]+$", row[x]):
+                if re.match(r"^([a-zA-Z0-9]+\s)*[a-zA-Z0-9]+$", row[x]) is none:
                     raise ValidationError('The text must start with, and end with, a alphanumeric character. There should NOT be any consecutive spaces too.')
 class deviceListAdmin(admin.ModelAdmin):
     list_display = ['deviceName']
