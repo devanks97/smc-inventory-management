@@ -6,6 +6,8 @@ from .models import record
 from .models import recordSummary
 from .models import deviceList
 
+import re
+
 from import_export import resources
 
 from .adminFiles.ModuleExportActionModelAdminSettings import ImportExportActionModelAdmin
@@ -21,17 +23,11 @@ class RecordResource(resources.ModelResource):
         import_id_fields = ('name',)
         skip_unchanged = True
         report_skipped = True
-
-class deviceListResource(resources.ModelResource):
-
-    class Meta:
-        model = deviceList
-        # fields = ('name','department','location','year','device__deviceName')
-        exclude = ('id', )
-        import_id_fields = ('name',)
-        skip_unchanged = True
-        report_skipped = True
-
+    def before_import(self, dataset, using_transactions, dry_run, **kwargs):
+        for row in dataset:
+			for x in range(0, 2):
+                if re.match(r"^([a-zA-Z0-9]+\s)*[a-zA-Z0-9]+$", row[x]):
+                    raise ValidationError('The text must start with, and end with, a alphanumeric character. There should NOT be any consecutive spaces too.')
 class deviceListAdmin(admin.ModelAdmin):
     list_display = ['deviceName']
     show_full_result_count = False
