@@ -2,6 +2,12 @@
 {% load i18n admin_urls admin_list cache %}
 {% load static from staticfiles %}
 {% block extrastyle %}
+<style>
+.results
+{
+	max-height:500px;
+}
+</style>
   <script type="text/javascript" src="{% static 'js/dropdownFilter.min.js' %}"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'css/dropdownFilter.min.css' %}" />
   {{ block.super }}
@@ -79,7 +85,7 @@
 			{% endif %}
 		{% endblock %}
 
-      <form id="changelist-form" style="flex-grow: 2;padding-right: 240px;" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
+      <form id="changelist-form" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
       {% if cl.formset %}
         <div>{{ cl.formset.management_form }}</div>
       {% endif %}

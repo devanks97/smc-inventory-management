@@ -1,113 +1,113 @@
-id,name,department,location,year,device
-,SAP(Tech),Ammonia,SMC,2016,Personal Computer
-,Fatima al katheri,HR,SMC,2016,Personal Computer
-,Utility Day Sup,Operations,SMC,2016,Personal Computer
-,LAB / Fatima alamri,LAB,SMC,2016,Personal Computer
-,Shrikant Umale,Electrical,SMC,2016,Personal Computer
-,Suresh Sonavane,Electrical,SMC,2016,Personal Computer
-,LAB / General Shift,LAB,SMC,2016,Personal Computer
-,Awadh alshanfari,MD,SMC,2016,Personal Computer
-,Utility shift sup,Operations,SMC,2016,Personal Computer
-,Praseed,WH,SMC,2016,Personal Computer
-,Maxim,Main,SMC,2016,Personal Computer
-,Ahmed Nawaz,Inst,SMC,2016,Personal Computer
-,Sami al qaiti,HR,SMC,2016,Personal Computer
-,Noor Bait Said,Finance,SMC,2016,Personal Computer
-,Lamia Salem,Finance,SMC,2016,Personal Computer
-,Kawkab,Mech,SMC,2016,Personal Computer
-,security,Security,SMC,2016,Personal Computer
-,Malik AL ghili,Inst,SMC,2016,Personal Computer
-,Abdullah.bahajjaj,HR,SMC,2016,Personal Computer
-,Moazzam Ali,Mech,SMC,2016,Personal Computer
-,Renjjan Thankachan,Mech,SMC,2016,Personal Computer
-,Morgan,Reli,SMC,2016,Personal Computer
-,Abdulqader,Electrical,SMC,2016,Personal Computer
-,Said al Awaid,Inst,SMC,2016,Personal Computer
-,headcount / nooh,HSE,SMC,2016,Personal Computer
-,Ghadha alshanfari,Technical,SMC,2016,Personal Computer
-,Irsad,Min,SMC,2016,Laptop
-,laila Bait said,Perfomance,SMC,2016,Laptop
-,Ammonia (Trainee),Ammonia,SMC,2016,Laptop
-,Ajay,Electrical,SMC,2016,Laptop
-,Yaseer albathari,Electrical,SMC,2016,Laptop
-,Ali al Barami,HR,SMC,2016,Laptop
-,Umair,Finance,SMC,2016,Laptop
-,Mani,Reli,SMC,2016,Laptop
-,Ammar Qatan,Ammonia,SMC,2016,Laptop
-,Mohammed al Hashmi,Operations,SMC,2016,Laptop
-,Mishra,Operations,SMC,2016,Laptop
-,Ahmed Muqaibl,Operations,SMC,2016,Laptop
-,Fatima al Shanfari (Committee),Technical,SMC,2016,Laptop
-,Malik Eid,Finance,SMC,2016,Laptop
-,saad al Minhali,HSE,SMC,2016,Laptop
-,Zaheer Ahmed,Inst,SMC,2016,Laptop
-,Srinivasan N,Reli,SMC,2016,Laptop
-,ali al Zawamri,Reli,SMC,2016,Laptop
-,(INDUCTION),HSE,SMC,2016,Laptop
-,Hussain  al Ojili,HR,SMC,2016,Laptop
-,Amit,Perfomance,SMC,2017,Personal Computer
-,Nooh Suroor,Security,SMC,2017,Personal Computer
-,Mohammed Bin Zain,Perfomance,SMC,2017,Personal Computer
-,LAB,LAB,SMC,2017,Personal Computer
-,Ahmed Khawar,Perfomance,SMC,2017,Personal Computer
-,Salim AlAamri,Perfomance,SMC,2017,Personal Computer
-,Tiwari,Perfomance,SMC,2017,Personal Computer
-,Abdullah Bhdoor,External,SMC,2017,Personal Computer
-,Jamal al Blushi,External,SMC,2017,Personal Computer
-,Amna,External,SMC,2017,Personal Computer
-,Majid Khan,IT,SMC,2017,Personal Computer
-,Suresh,Electrical,SMC,2017,Personal Computer
-,mohamad alnahdi,External,SMC,2017,Personal Computer
-,deepak,Operations,SMC,2017,Personal Computer
-,Subhash ,Planning,SMC,2017,Personal Computer
-,Sameeh,HSE,SMC,2017,Personal Computer
-,hassan al Barami,Planning,SMC,2017,Personal Computer
-,Jude,Inst,SMC,2017,Personal Computer
-,Mishra,Inst,SMC,2017,Personal Computer
-,Reliability Room,Reli,SMC,2017,Personal Computer
-,ANN NOMAN,External,SMC,2017,Personal Computer
-,Shahid Shah,Mech,SMC,2017,Personal Computer
-,khalid Aideed,Reception,SMC,2017,Personal Computer
-,Rakesh Saxena,LAB,SMC,2017,Personal Computer
-,Kiran Varma,Mech,SMC,2017,Personal Computer
-,Abdullah Al-Rawas,Technical,SMC,2017,Personal Computer
-,Eidroos,M&SH,SMC,2017,Laptop
-,LAB,LAB,SMC,2017,Laptop
-,Amira Tabook,Perfomance,SMC,2017,Laptop
-,Zuberi.hubib,Operations,SMC,2017,Laptop
-,Ahmed Kashoub,External,SMC,2017,Laptop
-,MUNDHER AL SHANFARI,Marketing,SMC,2017,Laptop
-,ASISH,Inst,SMC,2017,Laptop
-,Mohammed Kalshat,Admin,SMC,2017,Laptop
-,Hamza al Rawas,Perfomance,SMC,2017,Laptop
-,LAYLA.ALSHAHRI,External,SMC,2017,Laptop
-,Raid baznbour,HSE,SMC,2017,Laptop
-,Manoj.c,Planning,SMC,2017,Laptop
-,fatik al Balushi,Finance,SMC,2017,Laptop
-,Nitin,Electrical,SMC,2017,Laptop
-,Ali Ahmed ALShahari,Operations,SMC,2017,Laptop
-,SOUD AL KATHIRI,External,SMC,2017,Laptop
-,A.Samy,Reli,SMC,2017,Laptop
-,Ahmed al Mashani,HSE,SMC,2017,Laptop
-,Rakesh Saxena,LAB,SMC,2017,Laptop
-,Kiran varma,Mech,SMC,2017,Laptop
-,Abdullah AL Rawas,Technical,SMC,2017,Laptop
-,Omaima,External,SMC,2018,Personal Computer
-,LAB,LAB,SMC,2018,Personal Computer
-,LAB,LAB,SMC,2018,Personal Computer
-,fire room,HSE,SMC,2018,Personal Computer
-,STG,STG,SMC,2018,Personal Computer
-,Methanol Shelter,PRO,SMC,2018,Personal Computer
-,Ali AL Amri,HSE,SMC,2018,Personal Computer
-,TA Gate,HSE,SMC,2018,Personal Computer
-,Clinic,HSE,SMC,2018,Personal Computer
-,TA Gate,HSE,SMC,2018,Personal Computer
-,abulRaufe,Planning,SMC,2018,Personal Computer
-,George Kutty,Min,SMC,2018,Personal Computer
-,Mazid Al Rawas,External,SMC,2018,Laptop
-,Mashal,IT,SMC,2018,Laptop
-,Mundher Monitor,M&SH,SMC,2018,Laptop
-,IT _ Abdullah,IT,SMC,2018,Laptop
-,Yousif Bamokalif,Mech,SMC,2018,Laptop
-,Munira alAmri,Technical,SMC,2018,Laptop
-,Ali  Hubais,Perfomance,SMC,2018,Laptop
+name,department,location,year,device
+SAP(Tech),Ammonia,SMC,2016,Personal Computer
+Fatima al katheri,HR,SMC,2016,Personal Computer
+Utility Day Sup,Operations,SMC,2016,Personal Computer
+LAB / Fatima alamri,LAB,SMC,2016,Personal Computer
+Shrikant Umale,Electrical,SMC,2016,Personal Computer
+Suresh Sonavane,Electrical,SMC,2016,Personal Computer
+LAB / General Shift,LAB,SMC,2016,Personal Computer
+Awadh alshanfari,MD,SMC,2016,Personal Computer
+Utility shift sup,Operations,SMC,2016,Personal Computer
+Praseed,WH,SMC,2016,Personal Computer
+Maxim,Main,SMC,2016,Personal Computer
+Ahmed Nawaz,Inst,SMC,2016,Personal Computer
+Sami al qaiti,HR,SMC,2016,Personal Computer
+Noor Bait Said,Finance,SMC,2016,Personal Computer
+Lamia Salem,Finance,SMC,2016,Personal Computer
+Kawkab,Mech,SMC,2016,Personal Computer
+security,Security,SMC,2016,Personal Computer
+Malik AL ghili,Inst,SMC,2016,Personal Computer
+Abdullah.bahajjaj,HR,SMC,2016,Personal Computer
+Moazzam Ali,Mech,SMC,2016,Personal Computer
+Renjjan Thankachan,Mech,SMC,2016,Personal Computer
+Morgan,Reli,SMC,2016,Personal Computer
+Abdulqader,Electrical,SMC,2016,Personal Computer
+Said al Awaid,Inst,SMC,2016,Personal Computer
+headcount / nooh,HSE,SMC,2016,Personal Computer
+Ghadha alshanfari,Technical,SMC,2016,Personal Computer
+Irsad,Min,SMC,2016,Laptop
+laila Bait said,Perfomance,SMC,2016,Laptop
+Ammonia (Trainee),Ammonia,SMC,2016,Laptop
+Ajay,Electrical,SMC,2016,Laptop
+Yaseer albathari,Electrical,SMC,2016,Laptop
+Ali al Barami,HR,SMC,2016,Laptop
+Umair,Finance,SMC,2016,Laptop
+Mani,Reli,SMC,2016,Laptop
+Ammar Qatan,Ammonia,SMC,2016,Laptop
+Mohammed al Hashmi,Operations,SMC,2016,Laptop
+Mishra,Operations,SMC,2016,Laptop
+Ahmed Muqaibl,Operations,SMC,2016,Laptop
+Fatima al Shanfari (Committee),Technical,SMC,2016,Laptop
+Malik Eid,Finance,SMC,2016,Laptop
+saad al Minhali,HSE,SMC,2016,Laptop
+Zaheer Ahmed,Inst,SMC,2016,Laptop
+Srinivasan N,Reli,SMC,2016,Laptop
+ali al Zawamri,Reli,SMC,2016,Laptop
+(INDUCTION),HSE,SMC,2016,Laptop
+Hussain  al Ojili,HR,SMC,2016,Laptop
+Amit,Perfomance,SMC,2017,Personal Computer
+Nooh Suroor,Security,SMC,2017,Personal Computer
+Mohammed Bin Zain,Perfomance,SMC,2017,Personal Computer
+LAB,LAB,SMC,2017,Personal Computer
+Ahmed Khawar,Perfomance,SMC,2017,Personal Computer
+Salim AlAamri,Perfomance,SMC,2017,Personal Computer
+Tiwari,Perfomance,SMC,2017,Personal Computer
+Abdullah Bhdoor,External,SMC,2017,Personal Computer
+Jamal al Blushi,External,SMC,2017,Personal Computer
+Amna,External,SMC,2017,Personal Computer
+Majid Khan,IT,SMC,2017,Personal Computer
+Suresh,Electrical,SMC,2017,Personal Computer
+mohamad alnahdi,External,SMC,2017,Personal Computer
+deepak,Operations,SMC,2017,Personal Computer
+Subhash ,Planning,SMC,2017,Personal Computer
+Sameeh,HSE,SMC,2017,Personal Computer
+hassan al Barami,Planning,SMC,2017,Personal Computer
+Jude,Inst,SMC,2017,Personal Computer
+Mishra,Inst,SMC,2017,Personal Computer
+Reliability Room,Reli,SMC,2017,Personal Computer
+ANN NOMAN,External,SMC,2017,Personal Computer
+Shahid Shah,Mech,SMC,2017,Personal Computer
+khalid Aideed,Reception,SMC,2017,Personal Computer
+Rakesh Saxena,LAB,SMC,2017,Personal Computer
+Kiran Varma,Mech,SMC,2017,Personal Computer
+Abdullah Al-Rawas,Technical,SMC,2017,Personal Computer
+Eidroos,MSH,SMC,2017,Laptop
+LAB,LAB,SMC,2017,Laptop
+Amira Tabook,Perfomance,SMC,2017,Laptop
+Zuberi.hubib,Operations,SMC,2017,Laptop
+Ahmed Kashoub,External,SMC,2017,Laptop
+MUNDHER AL SHANFARI,Marketing,SMC,2017,Laptop
+ASISH,Inst,SMC,2017,Laptop
+Mohammed Kalshat,Admin,SMC,2017,Laptop
+Hamza al Rawas,Perfomance,SMC,2017,Laptop
+LAYLA.ALSHAHRI,External,SMC,2017,Laptop
+Raid baznbour,HSE,SMC,2017,Laptop
+Manoj.c,Planning,SMC,2017,Laptop
+fatik al Balushi,Finance,SMC,2017,Laptop
+Nitin,Electrical,SMC,2017,Laptop
+Ali Ahmed ALShahari,Operations,SMC,2017,Laptop
+SOUD AL KATHIRI,External,SMC,2017,Laptop
+A.Samy,Reli,SMC,2017,Laptop
+Ahmed al Mashani,HSE,SMC,2017,Laptop
+Rakesh Saxena,LAB,SMC,2017,Laptop
+Kiran varma,Mech,SMC,2017,Laptop
+Abdullah AL Rawas,Technical,SMC,2017,Laptop
+Omaima,External,SMC,2018,Personal Computer
+LAB,LAB,SMC,2018,Personal Computer
+LAB,LAB,SMC,2018,Personal Computer
+fire room,HSE,SMC,2018,Personal Computer
+STG,STG,SMC,2018,Personal Computer
+Methanol Shelter,PRO,SMC,2018,Personal Computer
+Ali AL Amri,HSE,SMC,2018,Personal Computer
+TA Gate,HSE,SMC,2018,Personal Computer
+Clinic,HSE,SMC,2018,Personal Computer
+TA Gate,HSE,SMC,2018,Personal Computer
+abulRaufe,Planning,SMC,2018,Personal Computer
+George Kutty,Min,SMC,2018,Personal Computer
+Mazid Al Rawas,External,SMC,2018,Laptop
+Mashal,IT,SMC,2018,Laptop
+Mundher Monitor,MSH,SMC,2018,Laptop
+IT _ Abdullah,IT,SMC,2018,Laptop
+Yousif Bamokalif,Mech,SMC,2018,Laptop
+Munira alAmri,Technical,SMC,2018,Laptop
+Ali  Hubais,Perfomance,SMC,2018,Laptop

@@ -1,10 +1,13 @@
 from django.contrib import admin
 from django.db.models import Count
+from django.core.exceptions import ValidationError
 
 # Register your models here.
 from .models import record
 from .models import recordSummary
 from .models import deviceList
+
+import re
 
 from import_export import resources
 
@@ -22,9 +25,8 @@ class RecordResource(resources.ModelResource):
         skip_unchanged = True
         report_skipped = True
 
-
 class deviceListAdmin(admin.ModelAdmin):
-    list_display = ['id','deviceName']
+    list_display = ['deviceName']
     show_full_result_count = False
     paginator = CachingPaginator
     pass
