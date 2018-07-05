@@ -1,3 +1,5 @@
+from django.contrib import admin
+
 from .models import record
 from .models import recordSummary
 from .models import deviceList
