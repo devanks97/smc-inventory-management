@@ -1,6 +1,6 @@
-from .adminFiles.ModuleExportActionModelAdmin import ImportExportActionModelAdmin
-from .adminFiles.ModuleRecordResource import RecordResource
-from .adminFiles.ModuleCachingPaginator import CachingPaginator
+from .ModuleExportActionModelAdmin import ImportExportActionModelAdmin
+from .ModuleRecordResource import RecordResource
+from .ModuleCachingPaginator import CachingPaginator
 
 class recordAdmin(ImportExportActionModelAdmin):
     resource_class = RecordResource

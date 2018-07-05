@@ -1,4 +1,4 @@
-from .models import record
+from ..models import record
 from import_export import resources
 
 class RecordResource(resources.ModelResource):
