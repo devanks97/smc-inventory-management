@@ -32,12 +32,12 @@ class deviceList(models.Model):
 
 
 class record(models.Model):
-    name = models.CharField(max_length=200,validators=[validate_correct_text],unique=True)
+    name = models.CharField(max_length=200,validators=[validate_correct_text])
     department = models.CharField(max_length=50,validators=[validate_correct_text])
     location = models.CharField(max_length=50,validators=[validate_correct_text])
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
     device = models.ForeignKey(deviceList,on_delete=models.CASCADE)
-    deviceTag = UpperCaseCharField(max_length=50,validators=[validate_deviceTag])
+    deviceTag = UpperCaseCharField(max_length=50,validators=[validate_deviceTag],unique=True)
     def __str__(self):
         return self.name
     def department_list(self):
