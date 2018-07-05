@@ -1,3 +1,3 @@
-from .modelsList.deviceListModel import deviceList
-from .modelsList.recordModel import record
-from .modelsList.recordSummaryModel import recordSummary
+from .modelsList.deviceListModel import *
+from .modelsList.recordModel import *
+from .modelsList.recordSummaryModel import *
