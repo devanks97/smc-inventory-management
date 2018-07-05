@@ -1,8 +1,8 @@
 from django.db import models
 from simple_history.models import HistoricalRecords
 
-from .modelFiles.CustomCharField import *
-from .modelFiles.CustomValidators import *
+from ..modelFiles.CustomCharField import *
+from ..modelFiles.CustomValidators import *
 from django.core.validators import MinValueValidator
 
 class record(models.Model):

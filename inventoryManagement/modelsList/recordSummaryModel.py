@@ -1,6 +1,6 @@
 from django.db import models
 
-from .models.recordModel import record
+from .recordModel import record
 
 class recordSummary(record):
     class Meta:

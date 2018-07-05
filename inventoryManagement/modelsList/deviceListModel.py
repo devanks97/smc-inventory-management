@@ -1,7 +1,7 @@
 from django.db import models
 
-from .modelFiles.CustomCharField import *
-from .modelFiles.CustomValidators import *
+from ..modelFiles.CustomCharField import *
+from ..modelFiles.CustomValidators import *
 
 class deviceList(models.Model):
     deviceName = TitleCaseCharField(primary_key=True,max_length=50,validators=[validate_correct_text])
