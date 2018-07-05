@@ -21,7 +21,7 @@ class RecordResource(resources.ModelResource):
         model = record
         # fields = ('name','department','location','year','device__deviceName')
         exclude = ('id', )
-        import_id_fields = ('name',)
+        import_id_fields = ('deviceTag',)
         skip_unchanged = True
         report_skipped = True
 
@@ -33,9 +33,9 @@ class deviceListAdmin(admin.ModelAdmin):
 		
 class recordAdmin(ImportExportActionModelAdmin):
     resource_class = RecordResource
-    list_display = ['name', 'department', 'year', 'device', 'location']
+    list_display = ['name', 'department', 'year', 'device', 'location','deviceTag']
     list_filter = ('department', 'year', 'device')
-    search_fields = ('name', 'department')
+    search_fields = ('name', 'department','deviceTag')
     show_full_result_count = False
     paginator = CachingPaginator
     pass
