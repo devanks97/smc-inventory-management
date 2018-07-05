@@ -16,7 +16,7 @@ class UpperCaseCharField(models.CharField):
 class TitleCaseCharField(models.CharField):
 
     def __init__(self, *args, **kwargs):
-        super(UpperCaseCharField, self).__init__(*args, **kwargs)
+        super(TitleCaseCharField, self).__init__(*args, **kwargs)
 
     def pre_save(self, model_instance, add):
         value = getattr(model_instance, self.attname, None)
@@ -25,4 +25,4 @@ class TitleCaseCharField(models.CharField):
             setattr(model_instance, self.attname, value)
             return value
         else:
-            return super(UpperCaseCharField, self).pre_save(model_instance, add)
+            return super(TitleCaseCharField, self).pre_save(model_instance, add)
