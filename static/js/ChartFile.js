@@ -27,18 +27,26 @@ function renderCanvas(){
 	var labelList = {};
 	var list_devices = [];
 	var dropdownUL_device_element =  document.getElementById("dropdownUL_device");
-	var list_devices_elements_a = dropdownUL_device_element.getElementsByTagName("a");
-	var selected_device = dropdownUL_device_element.getElementsByClassName("selected")[0].children[0].innerText;
-	if(selected_device == "All")
+	try
 	{
-		for(i=1;i<list_devices_elements_a.length;i++)
+		var list_devices_elements_a = dropdownUL_device_element.getElementsByTagName("a");
+		var selected_device = dropdownUL_device_element.getElementsByClassName("selected")[0].children[0].innerText;
+		if(selected_device == "All")
 		{
-			list_devices.push(list_devices_elements_a[i].innerText);
+			for(i=1;i<list_devices_elements_a.length;i++)
+			{
+				list_devices.push(list_devices_elements_a[i].innerText);
+			}
+		}
+		else
+		{
+			list_devices.push(selected_device);
 		}
 	}
-	else
+	catch(err)
 	{
-		list_devices.push(selected_device);
+		alert("Not enough Devices to build graph. Please add 1 or more Devices to DeviceList");
+		location.reload();
 	}
 	var list_departments = [];
 	var dropdownUL_department_element = document.getElementById("dropdownUL_department");
