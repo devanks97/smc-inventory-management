@@ -1,5 +1,6 @@
 from django.db import models
 from simple_history.models import HistoricalRecords
+from .modelList.deviceListModel import deviceList
 
 from ..modelFiles.CustomCharField import *
 from ..modelFiles.CustomValidators import *
