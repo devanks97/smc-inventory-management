@@ -37,7 +37,7 @@ class record(models.Model):
     location = models.CharField(max_length=50,validators=[validate_correct_text])
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
     device = models.ForeignKey(deviceList,on_delete=models.CASCADE)
-    deviceTag = models.UpperCaseCharField(max_length=50,validators=[validate_deviceTag])
+    deviceTag = UpperCaseCharField(max_length=50,validators=[validate_deviceTag])
     def __str__(self):
         return self.name
     def department_list(self):
