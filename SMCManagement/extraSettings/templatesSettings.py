@@ -1,3 +1,4 @@
+#Templates
 import os
 from ..settings import BASE_DIR
 TEMPLATES = [
