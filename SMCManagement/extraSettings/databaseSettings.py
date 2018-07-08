@@ -1,3 +1,6 @@
+# Database
+# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
 import os
 from ..settings import BASE_DIR
 DATABASES = {
