@@ -11,7 +11,8 @@ class recordSummaryAdmin(admin.ModelAdmin):
     show_full_result_count = False
     def changelist_view(self, request, extra_context=None):
         response = super().changelist_view(
-        request,,
+        request,
+        extra_context=summary,
         )
         try:
             qs = response.context_data['cl'].queryset
