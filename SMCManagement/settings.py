@@ -10,8 +10,8 @@ DEBUG_PROPAGATE_EXCEPTIONS = True
 ALLOWED_HOSTS = ["localhost",os.environ.get('HEROKU_ALLOWED_HOST')]
 
 ADMINS = [('DevanKS', 'devanks97@gmail.com')]
-#CHECK IF DEBUG
 
+#CHECK IF DEBUG
 if DEBUG:
 
     #DEBUG TOOLBAR CODE STARTS
@@ -37,34 +37,15 @@ from .extraSettings.middleware import *
 
 ROOT_URLCONF = 'SMCManagement.urls'
 
-#Templates
-
 from .extraSettings.templatesSettings import *
 
 WSGI_APPLICATION = 'SMCManagement.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
 from .extraSettings.databaseSettings import *
-
-# Password validation
-# https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
 from .extraSettings.passwordSettings import *
 
-# Internationalization
-# https://docs.djangoproject.com/en/2.0/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_L10N = True
-
-USE_TZ = True
+from .extraSettings.internationalizationSettings import *
 
 
 from .extraSettings.staticFilesSettings import *

@@ -1,7 +1,6 @@
 from django.core.paginator import Paginator
 from django.core.cache import cache
 
-# Modified version of a GIST I found in a SO thread
 class CachingPaginator(Paginator):
     def _get_count(self):
 
