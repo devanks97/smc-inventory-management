@@ -8,7 +8,7 @@ from django.core.validators import MinValueValidator
 
 class record(models.Model):
     name = TitleCaseCharField(max_length=200,validators=[validate_correct_text])
-    department = TitleCaseCharField(max_length=50,validators=[validate_correct_text])
+    department = UpperCaseCharField(max_length=50,validators=[validate_correct_text])
     location = TitleCaseCharField(max_length=50,validators=[validate_correct_text])
     year = models.DecimalField(max_digits=4,decimal_places=0,validators=[MinValueValidator(2016)])
     device = models.ForeignKey(deviceList,on_delete=models.CASCADE)
