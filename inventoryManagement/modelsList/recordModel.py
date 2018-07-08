@@ -19,3 +19,15 @@ class record(models.Model):
     class Meta:
         verbose_name = 'Record Of Inventory'
         verbose_name_plural = 'Records Of Inventory'
+
+import re
+deviceTagPattern = re.compile("^([a-zA-z])(-)((?:[a-zA-Z][a-zA-Z]+))(-)((?:[a-zA-Z][a-zA-Z]+))(-)(\d+)$")
+
+def validate_deviceTag_pre_save(sender, instance, **kwargs):
+    instanceDeviceTag = instance.deviceTag
+    if not deviceTagPattern.match(instanceDeviceTag):
+        from django.core.exceptions import ValidationError
+        raise ValidationError(
+            'DeviceTag "{}" is not following the format required'.format(instanceDeviceTag),code='deleting_protected')
+
+models.signals.pre_save.connect(validate_deviceTag_pre_save, sender=record)
