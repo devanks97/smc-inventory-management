@@ -28,6 +28,6 @@ def validate_deviceTag_pre_save(sender, instance, **kwargs):
     if not deviceTagPattern.match(instanceDeviceTag):
         from django.core.exceptions import ValidationError
         raise ValidationError(
-            'DeviceTag "{}" is not followinf the format'.format(instanceDeviceTag),code='deleting_protected')
+            'DeviceTag "{}" is not following the format required'.format(instanceDeviceTag),code='deleting_protected')
 
 models.signals.pre_save.connect(validate_deviceTag_pre_save, sender=record)
