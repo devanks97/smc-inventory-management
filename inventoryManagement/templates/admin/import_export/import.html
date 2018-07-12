@@ -15,6 +15,9 @@
     margin: 0;
     margin-bottom: 12px;
 }
+.traceback {
+display:none;
+}
 </style>
 {% if confirm_form %}
   <form action="{% url opts|admin_urlname:"process_import" %}" method="POST">

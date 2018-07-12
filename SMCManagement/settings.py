@@ -9,7 +9,7 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 DEBUG_PROPAGATE_EXCEPTIONS = True
 ALLOWED_HOSTS = ["localhost",os.environ.get('HEROKU_ALLOWED_HOST')]
 
-ADMINS = [('DevanKS', 'devanks97@gmail.com')]
+ADMINS = [('DevanKS', 'devanks97@gmail.com'),('IT.Support','it.support@smc.com')]
 
 #CHECK IF DEBUG
 if DEBUG:
